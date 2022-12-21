@@ -48,9 +48,9 @@ if __name__ == '__main__':
         sys.exit(1)
 
     # Execute the appropriate command
-    if command == 'encrypt':
+    if command in ['encrypt', '-e']:
         encrypt(input_file, output_file, key)
-    elif command == 'decrypt':
+    elif command in ['decrypt','-d']:
         decrypt(input_file, output_file, key)
     else:
         print('Error: invalid command')
